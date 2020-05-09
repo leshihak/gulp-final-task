@@ -1,0 +1,182 @@
+@media (max-width: 950px) {
+  .section-second {
+    max-height: unset;
+  }
+
+  .partner-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .partner-item {
+    width: 260px;
+    margin-right: unset;
+  }
+
+  .dreamshare-item {
+    height: 310px;
+    max-width: 230px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .travel-blocks {
+    justify-content: center;
+  }
+
+  .travel-item-img {
+    height: 100%;
+    max-height: 310px;
+    width: 100%;
+    max-width: 235px;
+  }
+
+  .travel-item {
+    max-width: 240px;
+  }
+
+  .travel-item-img-big {
+    max-width: 480px;
+  }
+
+  .travel-item-big {
+    max-width: 490px;
+  }
+
+  .big {
+    left: 25%;
+    top: 45%;
+  }
+
+  .small {
+    left: 10px;
+    max-width: 220px;
+}
+
+@media (max-width: 730px) {
+  .dreamshare-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-third {
+    max-height: unset;
+  }
+
+  .travel-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .travel-item-img-big {
+    max-width: unset;
+    height: 310px;
+    object-fit: cover;
+  }
+
+  .travel-item-big {
+    max-width: 240px;
+  }
+
+  .travel-item-txt {
+    max-width: 130px;
+  }
+
+  .big {
+    left: 27%;
+  }
+
+  .small {
+    left: 25%;
+  }
+
+  .holiday-registration {
+    flex-direction: column;
+  }
+
+  .holiday-btn {
+    margin-top: 10px;
+  }
+
+  input {
+    margin-right: unset;
+  }
+}
+
+@media (max-width: 450px) {
+  .registration {
+    width: 200px;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+
+  .header-company {
+    justify-content: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .log-in, .sign-up {
+    margin-right: unset;
+  }
+
+  .dreamshare-item {
+    height: 240px;
+    max-width: 300px;
+  }
+
+  .partner-btn , .promo-btn {
+    width: 280px;
+    line-height: 35px;
+    margin-top: 15px;
+  }
+
+  .travel-item-img, .travel-item-img-big {
+    max-height: 120px;
+    object-fit: cover;
+    max-width: unset;
+    margin: unset;
+  }
+
+  .travel-item, .travel-item-big {
+    max-width: unset;
+  }
+
+  .travel-item-txt {
+    max-width: unset;
+  }
+
+  .big {
+    top: 35%;
+    left: unset;
+  }
+
+  .small {
+    left: unset;
+    top: 35%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-company {
+    margin: 15px 0;
+  }
+
+  .footer-company__items--text {
+    margin-right: 15px;
+  }
+
+  .footer-company__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 250px;
+  }
+
+}

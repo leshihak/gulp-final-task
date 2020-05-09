@@ -1,0 +1,467 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin text($size, $weight, $lineHeight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+$font-main: 'Montserrat', sans-serif;
+$font-suptitle: 'Roboto', sans-serif;
+$red: rgba(255, 78, 81, 0.822);
+$white: rgb(255, 255, 255);
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;  
+}
+
+/* header */
+
+header {
+  @include column();
+  height: 700px;
+  background-image: url(/img/TzellBanner_MobileHome.jpg);
+  justify-content: space-between;
+}
+
+.header-company {
+  max-width: 1440px;
+  width: 100%;
+  color: $white;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.name-company {
+  @include text(20px, bold , 24px);
+  display: flex;
+  align-items: center;
+}
+
+.registration {
+  display: flex;
+  align-items: center;
+}
+
+.log-in, .sign-up {
+  @include text(14px, normal , 17px);
+  margin-right: 20px;
+}
+
+.sign-up {
+  height: 36px;
+  width: 90px;
+  background-color: unset;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 2px solid $white;
+  color: $white;
+  transition: linear 0.3s;
+  font-family: $font-main;
+  &:hover {
+    background-color: $red;
+  }
+}
+
+/* promo */
+
+.promo {
+  @include column();
+  width: 100%;
+  max-width: 470px;
+  height: 100%;
+  max-height: 252px;
+  color: $white;
+  justify-content: space-evenly;
+}
+
+.promo-title {
+  @include text(52px, bold , 63px);
+  text-align: center;
+}
+
+.promo-suptitle {
+  @include text(24px, 300, 24px);
+  font-family: $font-suptitle;
+  text-align: center;
+}
+
+.promo-btn {
+  @extend .sign-up;
+  @include text(14px, bold, 17px);
+  width: 225px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+/* section first */
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.section-first {
+  max-width: 975px;
+  width: 100%;
+}
+
+.dreamshare-txt {
+  @include text(26px, bold, 32px);
+  text-align: center;
+  margin: 90px 0 35px;
+}
+
+.dreamshare-blocks {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dreamshare-item {
+  height: 310px;
+  max-width: 300px;
+  width: 100%;
+  color: $white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dreamshare-item-text , .dreamshare-item-txt {
+  height: 160px;
+  padding: 21px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left {
+  background-image: url(/img/matt-molloy-sky-photographs-thumbnail.jpg);
+}
+
+.right {
+  background-image: url(/img/photo-1524850011238-e3d235c7d4c9.jpg);
+}
+
+.center {
+  background-image: url(/img/unnamed.jpg);
+}
+
+.dreamshare-btn {
+  @include text(10px, normal, 12px);
+  width: 70px;
+  height: 20px;
+  background: $red;
+  border-radius: 40px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border: 2px solid $red;
+  color: $white;
+  font-family: $font-main;
+}
+
+.dreamshare-title {
+  @include text(24px, bold, 25px);
+}
+
+.dreamshare-suptitle {
+  @include text(14px, 300, 14px);
+  font-family: $font-suptitle;
+}
+
+/* section second */
+
+.section-second {
+  @include column();
+  max-height: 470px;
+  height: 100%;
+  max-width: 940px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.partner-blocks {
+  display: flex;
+}
+
+.partner-item {
+  @include center();
+  width: 210px;
+  height: 210px;
+  margin-right: 10px;
+  flex-direction: column;
+}
+
+.partner-txt {
+  @include text(26px, bold, 32px);
+  text-align: center;
+  margin: 90px 0 35px;
+}
+
+.partner-item-photo {
+  position: relative;
+}
+
+.partner-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.icon {
+  @include center();
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 5px solid $white;
+  right: 5px;
+  bottom: 0px;
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.yellow{
+  background-color: rgb(251, 255, 0);
+}
+
+.blue {
+  background-color: rgb(0, 162, 255);
+}
+
+.green {
+  background-color: rgb(0, 255, 21);
+}
+
+.icon-img {
+  height: 20px;
+  width: 20px;
+}
+
+.partner-item-text {
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.partner-name {
+  @include text(14px, bold, 17px);
+}
+
+.dreamshare-suptitle {
+  @include text(14px, 300, 14px);
+  font-family: $font-suptitle;
+  color: rgb(102, 102, 102);
+  margin-top: 12px;
+}
+
+.partner-btn {
+  @extend .sign-up;
+  @include text(14px, bold, 17px);
+  width: 180px;
+  height: 40px;
+  margin-top: 55px;
+  border: 2px solid $red;
+  color: $red;
+  &:hover {
+    background-color: $red;
+    color: $white;
+    border: 2px solid $white;
+  }
+}
+
+/* section-third */
+
+.section-third {
+  height: 100%;
+  max-height: 1500px;
+  max-width: 940px;
+  width: 100%;
+}
+
+.travel-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.travel-item {
+  height: 100%;
+  max-height: 320px;
+  width: 100%;
+  max-width: 310px;
+  position: relative;
+}
+
+.travel-item-big {
+  height: 100%;
+  max-height: 320px;
+  width: 100%;
+  max-width: 630px;
+  position: relative;
+}
+
+.travel-item-img {
+  height: 100%;
+  max-height: 310px;
+  width: 100%;
+  max-width: 300px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.travel-item-img-big {
+  height: 100%;
+  max-height: 310px;
+  width: 100%;
+  max-width: 620px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.activity-txt {
+  @include text(26px, bold, 32px);
+  text-align: center;
+  margin: 90px 0 35px;
+}
+
+.travel-item-txt {
+  @include text(22px, bold, 27px);
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
+  color: $white;
+  position: absolute;
+}
+
+.small {
+  top: 50%;
+  left: 12%;
+}
+
+.big {
+  left: 30%;
+  top: 40%;
+}
+
+/* section-fourth */
+
+.section-fourth {
+  @include center();
+  width: 550px;
+  flex-direction: column;
+}
+
+.holiday-txt {
+  @include text(26px, bold, 32px);
+  text-align: center;
+  margin: 90px 0 35px;
+}
+
+.holiday-suptitle {
+  @include text(18px, 300, 14px);
+  font-family: $font-suptitle;
+  color: rgb(102, 102, 102);
+  margin-top: 12px;
+}
+
+.holiday-registration {
+  @include center();
+  margin-top: 25px;
+}
+
+input {
+  height: 40px;
+  width: 300px;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(187, 187, 187);
+  margin-right: 10px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.holiday-btn {
+  @extend .dreamshare-btn;
+  @include text(14px, normal, 17px);
+  width: 175px;
+  height: 40px;
+}
+
+.br {
+  height: 2px;
+  background: $red;
+  margin-top: 100px;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 0;
+}
+
+.footer-name {
+  @include text(16px, normal, 20px);
+  color: $red;
+}
+
+.footer-company {
+  cursor: pointer;
+}
+
+.footer-company__txt, .footer-patners {
+  @include text(14px, bold, 17px);
+  color: rgb(68, 68, 68);
+}
+
+.footer-company__items {
+  margin-top: 10px;
+}
+
+.footer-company__items--text {
+  @include text(14px, normal, 26px);
+  font-family: $font-suptitle;
+  color: rgb(153, 153, 153);
+}
+
+.footer-design {
+  @include column();
+}
+
+p {
+  @include text(10px, bold, 12px);
+  margin-top: 5px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 1px;
+  color: rgb(204, 204, 204);
+}
+
+.footer-design__img {
+  height: 70px;
+  width: 70px;
+}
